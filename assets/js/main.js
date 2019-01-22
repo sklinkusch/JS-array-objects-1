@@ -25,14 +25,14 @@ const books = [
   }
 ];
 function IsOnSale(myArray) {
-  myArray.forEach(element => {
-    if (element.onSale) {
-      document.write(
-        `The book "${element.title}" by ${element.author}, available at ${
-          element.url
-        } is on sale.<br>`
-      );
-    }
-  });
+  const filteredArray = myArray.filter(element => element.onSale == true);
+  const sentence = filteredArray.map(
+    element =>
+      `The book "${element.title}" by ${element.author}, available at ${
+        element.url
+      } is on sale.`
+  );
+  const text = sentence.join("<br>");
+  document.getElementById("textfield").innerHTML = text;
 }
 IsOnSale(books);
