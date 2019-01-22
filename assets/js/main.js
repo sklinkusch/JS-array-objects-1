@@ -30,7 +30,7 @@ function IsOnSale(myArray) {
     element =>
       `The book "${element.title}" by ${element.author}, available at ${
         element.url
-      } is on sale.`
+      }, is on sale.`
   );
   const text = sentence.join("<br>");
   document.getElementById("textfield").innerHTML = text;
