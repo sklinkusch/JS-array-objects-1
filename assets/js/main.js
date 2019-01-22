@@ -27,7 +27,11 @@ const books = [
 function IsOnSale(myArray) {
   myArray.forEach(element => {
     if (element.onSale) {
-      console.log(element);
+      document.write(
+        `The book "${element.title}" by ${element.author}, available at ${
+          element.url
+        } is on sale.<br>`
+      );
     }
   });
 }
